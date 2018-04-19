@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.tecbiz.tecbizassociado" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>helloworld</name>
+<widget id="com.tecbiz.tecbizassociado" version="314" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>TecBiz Associado</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Aplicativo para consulta de saldos, extratos e lojas credenciadas.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="tecnologia@tecbiz.com.br" href="http://www.tecbiz.com.br">
+        TecBiz Tecnologia e Negocios
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
