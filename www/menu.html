@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="themes/tecbizassociado.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="./css/custom.css" />
+        <script src="jquery/jquery-1.11.3.min.js"></script>
+        <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery.storageapi.min.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <title>TecBiz Associado</title>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a" align="center">
+            <div data-role="header" data-position="fixed" style="display: inline; clear: both;">
+                <h1>
+                    TecBiz Associado
+                </h1>
+            </div>
+
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-a ui-responsive" align="center">
+                    <p id="entidade_menu" style="font-weight:bold;">
+                    </p>
+                    <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-refresh ui-btn-icon-notext" style="background-color:#F7931E;" onclick="recarregar();"></a>
+                    <p id="portador_menu" style="font-weight:bold;"></p>
+                    <p id="situacao_portador" style="font-weight:bold;margin:0px;"></p>
+                </div>
+                <fieldset data-role="controlgroup" data-type="vertical" style="width: 90%; padding-bottom: 20px;">
+                    <a class="ui-btn ui-btn-inline ui-btn-corner-all" href="#" style="background:#fff;border-color:#F7931E;color:#F7931E;font-weight:100;width:90%;box-shadow: 5px 5px 2px #CCC;"><small style="text-shadow:none;float:left;line-height:2; font-weight: bold;">Saldo Mensal</small><span id="saldo_mensal" style="float:right;text-shadow:2px 2px #f4f4f4; font-weight:bold;"></span></a>
+                    <a id="linhaSaldoTotal" class="ui-btn ui-btn-inline ui-btn-corner-all" href="#" style="background:#fff;border-color:#F7931E;color:#F7931E;font-weight:100;width:90%;box-shadow: 5px 5px 2px #CCC;"><small style="text-shadow:none;float:left;line-height:2; font-weight: bold;">Saldo Total</small><span id="saldo_total" style="float:right;text-shadow:2px 2px #f4f4f4; font-weight:bold;"></span></a>
+                </fieldset>
+
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <a class="ui-btn ui-icon-shop ui-btn-icon-top ui-btn-corner-all ui-btn-inline" href="consulta.html" rel="external" style="background:#F7931E;color:#fff;font-weight:100;">Redes
+                    </a>
+                    <a class="ui-btn ui-icon-bars ui-btn-icon-top ui-btn-corner-all ui-btn-inline" href="extrato_mes.html" rel="external" style="background:#F7931E;color:#fff;font-weight:100;">Extrato
+                    </a>
+                    <a class="ui-btn ui-icon-calendar ui-btn-icon-top ui-btn-corner-all ui-btn-inline" href="saldos_mensais.html" rel="external" style="background:#F7931E;color:#fff;font-weight:100;">Saldos
+                    </a>
+                </fieldset>
+            
+            </div>
+            <div data-role="footer" data-position="fixed" style="width: 100%;"> 
+                <a href="#" rel="external" onClick="sair();" class="ui-btn ui-icon-power ui-btn-icon-notext ui-corner-all" style="background:#F7931E; float: left; margin-left: 50px;"></a>
+                <a href="alterSenha.html" rel="external" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all" style="background:#F7931E; float: right; margin-right: 50px;" id="btnAlterSenha"></a>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
