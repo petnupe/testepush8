@@ -1,0 +1,17 @@
+{
+  "name": "com.tecbiz.testepush6",
+  "version": "1.0.0",
+  "displayName": "helloworld",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-fcm": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~7.0.0",
+    "cordova-plugin-fcm": "~2.1.2"
+  }
+}

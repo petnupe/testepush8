@@ -1,0 +1,28 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "com.tecbiz.testepush6"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+      "id": "cordova-plugin-fcm.FCMPlugin",
+      "pluginId": "cordova-plugin-fcm",
+      "clobbers": [
+        "FCMPlugin"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-fcm": "2.1.2"
+  }
+}
