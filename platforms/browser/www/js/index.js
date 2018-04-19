@@ -34,8 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
-        
+                
         FCMPlugin.onTokenRefresh(function(token){
             alert( token );
         });
