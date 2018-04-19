@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "927567259064",
-    "firebase_url": "https://testepush6.firebaseio.com",
-    "project_id": "testepush6",
-    "storage_bucket": "testepush6.appspot.com"
+    "project_number": "435182368836",
+    "firebase_url": "https://tecbiz-associados.firebaseio.com",
+    "project_id": "tecbiz-associados",
+    "storage_bucket": "tecbiz-associados.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:927567259064:android:fc022f5978ce43d8",
+        "mobilesdk_app_id": "1:435182368836:android:bcfb10c5a4395621",
         "android_client_info": {
-          "package_name": "com.tecbiz.testepush6"
+          "package_name": "com.tecbiz.tecbizassociado"
         }
       },
       "oauth_client": [
         {
-          "client_id": "927567259064-h7btb4e9fd9tpcm20chea2nl4mukoal5.apps.googleusercontent.com",
+          "client_id": "435182368836-f82o1b14jd3v5kj23t9tratm03rf5qg5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAlE1z-bweTDSsC_8YB-5VV1o-ubZXNXnY"
+          "current_key": "AIzaSyDMerr0hj365PndzzDaoMdY5r1wHUjuuP4"
         }
       ],
       "services": {

@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "com.tecbiz.testepush6"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.tecbiz.testepush6"
     }
   },
   "dependent_plugins": {},
@@ -20,9 +23,26 @@
       "clobbers": [
         "FCMPlugin"
       ]
+    },
+    {
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "id": "cordova-plugin-dialogs.notification",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-dialogs/www/browser/notification.js",
+      "id": "cordova-plugin-dialogs.notification_browser",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-fcm": "2.1.2"
+    "cordova-plugin-fcm": "2.1.2",
+    "cordova-plugin-dialogs": "2.0.1"
   }
 }

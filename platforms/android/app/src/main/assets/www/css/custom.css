@@ -1,0 +1,37 @@
+.botao_menu {
+	margin-top: 10px;
+	display: table;
+    border: 1px solid #fff;
+    width: 90%;
+    padding: 10px;
+    background-color:#F7931E;
+
+}
+
+#senha, #nova_senha, #nova_senha2 {
+    -webkit-text-security: disc;
+}
+@-ms-viewport{width:device-width;}
+
+body {
+  overflow: hidden;
+  -ms-user-select: none;
+  -ms-content-zooming: none;
+  -ms-touch-action: none;
+}
+
+#totalExtrato {
+    font-weight: bold;
+}
+
+#nomeMes {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#tabelaExtrato td {
+    border-bottom: thin dotted silver;
+    padding: 15px 0px 5px 0px;
+}
+
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;} 

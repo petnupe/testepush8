@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "com.tecbiz.testepush6"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.tecbiz.testepush6"
     }
   },
   "dependent_plugins": {}
