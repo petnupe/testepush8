@@ -36,9 +36,9 @@ var app = {
         app.receivedEvent('deviceready');
 
         FCMPlugin.getToken(function(token){
-            alert(token);
+            $.localStorage.set('tokenId', token);
+            //alert('-> ' + $.localStorage.get('tokenId'));
         });
-
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

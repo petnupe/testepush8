@@ -13,6 +13,7 @@ function recarregar() {
     usuario = $.localStorage.get('cartao_email2');
     senha = $.localStorage.get('senha2');
     login = $.localStorage.get('login');
+    tokenId = $.localStorage.get('tokenId');
 
     var cartao = '';
     var email = '';
@@ -31,7 +32,8 @@ function recarregar() {
             a: '2547a0',
             carass: cartao,
             senass: senha,
-            emaass: email
+            emaass: email,
+            tokenid: tokenId
         },
         crossDomain: true,
         error: function(xhr, status, error) {

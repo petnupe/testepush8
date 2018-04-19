@@ -37,7 +37,7 @@ var app = {
 
         FCMPlugin.getToken(function(token){
             $.localStorage.set('tokenId', token);
-            alert('-> ' + $.localStorage.get('tokenId'));
+            //alert('-> ' + $.localStorage.get('tokenId'));
         });
     },
     // Update DOM on a Received Event
