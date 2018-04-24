@@ -35,6 +35,8 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
+        cordova.plugins.notification.badge.set(10);
+
         FCMPlugin.getToken(function(token){
             $.localStorage.set('tokenId', token);
             //alert('-> ' + $.localStorage.get('tokenId'));
@@ -48,7 +50,6 @@ var app = {
               //Notification was received in foreground. Maybe the user needs to be notified.
               alert(data.title + '\n'+ data.body);
             }
-            cordova.plugins.notification.badge.set(10);
         });
 
     },
