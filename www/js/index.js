@@ -40,7 +40,7 @@ var app = {
             //alert('-> ' + $.localStorage.get('tokenId'));
         });
 
-        FCMPlugin.onNotification(function(data){
+        FCMPlugin.onNotification(function(data) {
             if(data.wasTapped) {
               //Notification was received on device tray and tapped by the user.
               alert(data.title + '\n'+ data.body);
@@ -48,6 +48,7 @@ var app = {
               //Notification was received in foreground. Maybe the user needs to be notified.
               alert(data.title + '\n'+ data.body);
             }
+            cordova.plugins.notification.badge.set(10);
         });
 
     },

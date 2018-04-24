@@ -23,6 +23,14 @@ module.exports = [
     "merges": [
       "navigator.notification"
     ]
+  },
+  {
+    "id": "cordova-plugin-badge.Badge",
+    "file": "plugins/cordova-plugin-badge/www/badge.js",
+    "pluginId": "cordova-plugin-badge",
+    "clobbers": [
+      "cordova.plugins.notification.badge"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -30,7 +38,8 @@ module.exports.metadata =
 {
   "cordova-plugin-fcm": "2.1.2",
   "cordova-plugin-dialogs": "2.0.1",
-  "cordova-plugin-whitelist": "1.3.3"
+  "cordova-plugin-whitelist": "1.3.3",
+  "cordova-plugin-badge": "0.8.7"
 };
 // BOTTOM OF METADATA
 });
