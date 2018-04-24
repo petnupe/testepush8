@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        cordova.plugins.notification.badge.set(10);
+        var = qtdMessages = 0;
 
         FCMPlugin.getToken(function(token){
             $.localStorage.set('tokenId', token);
@@ -46,8 +46,13 @@ var app = {
             if(data.wasTapped) {
               //Notification was received on device tray and tapped by the user.
               alert(data.title + '\n'+ data.body);
+              cordova.plugins.notification.badge.set(qtdMessages - 1);
             } else {
               //Notification was received in foreground. Maybe the user needs to be notified.
+              
+            cordova.plugins.notification.badge.set(qtdMessages + 1);
+
+
               alert(data.title + '\n'+ data.body);
             }
         });
