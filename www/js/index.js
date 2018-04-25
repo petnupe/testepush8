@@ -43,9 +43,12 @@ var app = {
         FCMPlugin.onNotification(function(data) {
             if(data.wasTapped) {
               //Notification was received on device tray and tapped by the user.
+              navigator.notification.alert(data.title + '\n'+ data.body, null, 'Atenção', 'Ok');
               alert(data.title + '\n'+ data.body);
             } else {
               //Notification was received in foreground. Maybe the user needs to be notified.
+              
+              navigator.notification.alert(data.title + '\n'+ data.body, null, 'Atenção', 'Ok');
               alert(data.title + '\n'+ data.body);
             }
         });
