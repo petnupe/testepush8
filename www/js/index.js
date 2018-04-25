@@ -40,7 +40,7 @@ var app = {
         });
 
         FCMPlugin.onNotification(function(data) {
-            navigator.notification.alert(data.title + '\n'+ data.body, null, 'Mensagem para você:', 'Ok');
+            navigator.notification.alert(data.title + '\n\n'+ data.body, null, 'Mensagem para você:', 'Ok');
             /*
             if(data.wasTapped) {
               //Notification was received on device tray and tapped by the user.
