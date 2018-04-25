@@ -37,20 +37,23 @@ var app = {
 
         FCMPlugin.getToken(function(token){
             $.localStorage.set('tokenId', token);
-            //alert('-> ' + $.localStorage.get('tokenId'));
         });
 
         FCMPlugin.onNotification(function(data) {
+            navigator.notification.alert(data.title + '\n'+ data.body, null, 'Mensagem para você:', 'Ok');
+            /*
             if(data.wasTapped) {
               //Notification was received on device tray and tapped by the user.
-              navigator.notification.alert(data.title + '\n'+ data.body, null, 'Atenção', 'Ok');
-              alert(data.title + '\n'+ data.body);
+              //navigator.notification.alert(data.title + '\n'+ data.body, null, 'Atenção', 'Ok');
+              //alert(data.title + '\n'+ data.body);
             } else {
               //Notification was received in foreground. Maybe the user needs to be notified.
               
-              navigator.notification.alert(data.title + '\n'+ data.body, null, 'Atenção', 'Ok');
-              alert(data.title + '\n'+ data.body);
+              //navigator.notification.alert(data.title + '\n'+ data.body, null, 'Atenção', 'Ok');
+              //alert(data.title + '\n'+ data.body);
             }
+            */
+            
         });
 
     },
