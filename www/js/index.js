@@ -52,8 +52,7 @@ var app = {
               //navigator.notification.alert(data.title + '\n'+ data.body, null, 'Atenção', 'Ok');
               //alert(data.title + '\n'+ data.body);
             }
-            */
-            
+           */
         });
 
     },
