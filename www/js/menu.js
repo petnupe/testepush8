@@ -75,7 +75,7 @@ function preencheCampos() {
     var saldo_usuario = $.localStorage.get('saldo_mensal');
     $('#portador_menu').text(data[13].usuario.portador);
     $('#entidade_menu').text(data[13].usuario.etd);
-    $('#saldo_mensal').text('R$ ' + data[12].sintetico.saldo_mensal);
+    $('#saldo_mensal').text(data[12].sintetico.saldo_mensal);
    
     saldoTotal = data[12].sintetico.saldo_total;
 
