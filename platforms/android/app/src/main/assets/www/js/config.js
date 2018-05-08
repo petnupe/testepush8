@@ -1,1 +1,0 @@
-var _HOST_ = 'http://192.168.1.2/tecbiz/tecbiz.php';
