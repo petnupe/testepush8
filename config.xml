@@ -8,12 +8,12 @@
         TecBiz Tecnologia e Negocios
     </author>
     <content src="index.html" />
-    <engine name="android" spec="7.0.0" />
+    
     <preference name="android-minSdkVersion" value="14" /> 
     <preference name="android-targetSdkVersion" value="28" /> 
     <preference name="pgb-builder-version" value="2" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
     <platform name="android">
         <resource-file src="google-services.json" target="google-services.json" />
         <icon src="icon.png" />
@@ -46,9 +46,8 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    <!-- <plugin name="cordova-plugin-fcm"  spec="^2.1.2"/> -->
 
-    <plugin name="cordova-plugin-fcm" source="npm" spec="^2.1.2"/>
+    <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
 </widget>
