@@ -10,6 +10,7 @@
     <content src="index.html" />
     <preference name="android-minSdkVersion" value="21" /> 
     <preference name="android-targetSdkVersion" value="28" /> 
+    <preference name="pgb-builder-version" value="2" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="phonegap-version" value="cli-7.0.1" />
     <platform name="android">
