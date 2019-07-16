@@ -9,11 +9,11 @@
     </author>
     <content src="index.html" />
     
-    <preference name="android-minSdkVersion" value="28" /> 
+    <preference name="android-minSdkVersion" value="14" /> 
     <preference name="android-targetSdkVersion" value="28" /> 
     <preference name="pgb-builder-version" value="2" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="phonegap-version" value="cli-6.5.1" />
     <platform name="android">
         <resource-file src="google-services.json" target="google-services.json" />
         <icon src="icon.png" />
