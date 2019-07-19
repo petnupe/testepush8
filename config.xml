@@ -16,7 +16,7 @@
     <preference name="phonegap-version" value="cli-8.0.0" />
     <platform name="android">
 
-        <resource-file src="platforms/android/google-services.json" target="google-services.json" />                
+        <resource-file src="google-services.json" target="Platforms/Android/google-services.json" />                
 
         <icon src="icon.png" />
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
