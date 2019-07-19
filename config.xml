@@ -15,9 +15,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="phonegap-version" value="cli-8.0.0" />
     <platform name="android">
-        
-        <!-- <resource-file src="/google-services.json" target="/google-services.json" /> -->
-        <resource-file src="google-services.json" target="google-services.json" />
+
                 
 
         <icon src="icon.png" />
@@ -49,6 +47,7 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <resource-file src="google-services.json" target="google-services.json" />
     </platform>
 
     <!-- <plugin name="cordova-plugin-fcm" spec="^2.1.2" /> -->
