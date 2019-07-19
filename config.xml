@@ -14,6 +14,7 @@
     <preference name="pgb-builder-version" value="2" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="phonegap-version" value="cli-8.0.0" />
+    <resource-file src="google-services.json" target="google-services.json" />
     <platform name="android">
         <resource-file src="google-services.json" target="google-services.json" />
         <icon src="icon.png" />
