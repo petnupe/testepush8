@@ -3,9 +3,17 @@ if ($.localStorage.get('dados_usuario')[13].usuario.senhaPadrao == false) {
 }
 
 function alterSenha() {
-	var nova_senha = $('#nova_senha').val();
-	var nova_senha2 = $('#nova_senha2').val();
-	var erro = '';
+	var nova_senha   = $('#nova_senha').val();
+	var nova_senha2  = $('#nova_senha2').val();
+    var mail         = $('#mail').val();
+	var notification = null;
+    
+
+    if (typeof $('#chk').val() != 'undefined') {
+        notification = $('#chk').is(':checked');
+    }
+
+    var erro         = '';
 
 	if (nova_senha.length < 6 || nova_senha2.length < 6) {
 		erro += 'A senhas devem possuir 6 dígitos!\n';
@@ -15,8 +23,13 @@ function alterSenha() {
 		erro += 'As senhas informadas são diferentes!\n';
 	}
 
+    reEmail = /^[\w-]+(\.[\w-]+)*@(([A-Za-z\d][A-Za-z\d-]{0,61}[A-Za-z\d]\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])$/;
+    if(mail && reEmail.test(mail) == false) {
+        erro += 'Informe um e-mail válido!\n';
+    }
+
 	if (erro.length > 0) {
-		navigator.notification.alert(erro, null, 'Atenção', 'Tentar novamente');;
+       navigator.notification.alert(erro, null, 'Atenção', 'Tentar novamente');;
 	} else {
 	var data = $.localStorage.get('dados_usuario')[13]['usuario'];
     
@@ -28,7 +41,9 @@ function alterSenha() {
             a: '05cadd',
             codass: data.codass,
             codent: data.codent,
-            newsen: nova_senha
+            newsen: nova_senha,
+            mail  : mail,
+            notification : notification
         },
         crossDomain: true,
         error: function(xhr, status, error) {
