@@ -66,8 +66,10 @@ function alterSenha() {
 				navigator.notification.alert('Senha alterada com sucesso!');
             	location.href = "menu.html";
             } else {
-            	navigator.notification.alert('Problemas na alteração da senha, favor verificar!');
+                navigator.notification.alert(data.descricao + '!');
             }
+
+            console.log(data);
         }
     });
 	}
