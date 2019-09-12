@@ -8,7 +8,6 @@ function alterSenha() {
     var mail         = $('#mail').val();
 	var notification = null;
     
-
     if (typeof $('#chk').val() != 'undefined') {
         notification = $('#chk').is(':checked');
     }
@@ -31,46 +30,44 @@ function alterSenha() {
 	if (erro.length > 0) {
        navigator.notification.alert(erro, null, 'Atenção', 'Tentar novamente');;
 	} else {
-	var data = $.localStorage.get('dados_usuario')[13]['usuario'];
-    
-	$.ajax({
-        type: 'GET',
-        dataType: 'json',
-        url: _HOST_,
-        data: {
-            a: '05cadd',
-            codass: data.codass,
-            codent: data.codent,
-            newsen: nova_senha,
-            mail  : mail,
-            notification : notification
-        },
-        crossDomain: true,
-        error: function(xhr, status, error) {
-            navigator.notification.alert('Verifique a conexão com a internet!', null, 'Atenção', 'Tentar novamente');
-        },
-        beforeSend: function() {
-            $.mobile.loading( "show", {
-                      text: "Aguarde...",
-                      textVisible: true,
-                      theme: "a"
-            });
-        },
-        complete: function () {
-            $.mobile.loading('hide');
-        },
-        success: function(data) {
-            if(data.retorno == '0') {
-            	$.localStorage.set('senha', nova_senha);
-                $.localStorage.set('senha2', nova_senha);
-				navigator.notification.alert('Senha alterada com sucesso!');
-            	location.href = "menu.html";
-            } else {
-                navigator.notification.alert(data.descricao + '!');
+    	var data = $.localStorage.get('dados_usuario')[13]['usuario'];
+        
+    	$.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: _HOST_,
+            data: {
+                a: '05cadd',
+                codass: data.codass,
+                codent: data.codent,
+                newsen: nova_senha,
+                mail  : mail,
+                notification : notification
+            },
+            crossDomain: true,
+            error: function(xhr, status, error) {
+                navigator.notification.alert('Verifique a conexão com a internet!', null, 'Atenção', 'Tentar novamente');
+            },
+            beforeSend: function() {
+                $.mobile.loading( "show", {
+                          text: "Aguarde...",
+                          textVisible: true,
+                          theme: "a"
+                });
+            },
+            complete: function () {
+                $.mobile.loading('hide');
+            },
+            success: function(data) {
+                if(data.retorno == '0') {
+                	$.localStorage.set('senha', nova_senha);
+                    $.localStorage.set('senha2', nova_senha);
+    				navigator.notification.alert('Senha alterada com sucesso!');
+                	location.href = "menu.html";
+                } else {
+                    navigator.notification.alert(data.descricao);
+                }
             }
-
-            console.log(data);
-        }
-    });
+        });
 	}
 }
