@@ -22,13 +22,17 @@ function alterSenha() {
 		erro += 'As senhas informadas são diferentes!\n';
 	}
 
+    if($('#chk').is(':checked') && !mail) {
+        erro += 'Para receber as notificações informe seu e-mail!\n';
+    }
+
     reEmail = /^[\w-]+(\.[\w-]+)*@(([A-Za-z\d][A-Za-z\d-]{0,61}[A-Za-z\d]\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])$/;
     if(mail && reEmail.test(mail) == false) {
         erro += 'Informe um e-mail válido!\n';
     }
 
 	if (erro.length > 0) {
-       navigator.notification.alert(erro, null, 'Atenção', 'Tentar novamente');;
+      navigator.notification.alert(erro, null, 'Atenção', 'Tentar novamente');
 	} else {
     	var data = $.localStorage.get('dados_usuario')[13]['usuario'];
         
