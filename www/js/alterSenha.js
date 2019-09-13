@@ -28,7 +28,7 @@ function alterSenha() {
     }
 
 	if (erro.length > 0) {
-       navigator.notification.alert(erro, null, 'Atenção', 'Tentar novamente');;
+       navigator.notification.alert(erro, null, 'Atenção[1]', 'Tentar novamente');;
 	} else {
     	var data = $.localStorage.get('dados_usuario')[13]['usuario'];
         
@@ -46,7 +46,7 @@ function alterSenha() {
             },
             crossDomain: true,
             error: function(xhr, status, error) {
-                navigator.notification.alert('Verifique a conexão com a internet!', null, 'Atenção', 'Tentar novamente');
+                navigator.notification.alert('Verifique a conexão com a internet!', null, 'Atenção[2]', 'Tentar novamente');
             },
             beforeSend: function() {
                 $.mobile.loading( "show", {
@@ -62,10 +62,10 @@ function alterSenha() {
                 if(data.retorno == '0') {
                 	$.localStorage.set('senha', nova_senha);
                     $.localStorage.set('senha2', nova_senha);
-    				navigator.notification.alert('Senha alterada com sucesso!');
+    				navigator.notification.alert('Senha alterada com sucesso!', null, 'Atenção[3]');
                 	location.href = "menu.html";
                 } else {
-                    navigator.notification.alert(data.descricao);
+                    navigator.notification.alert(data.descricao, null, 'Atenção[4]');
                 }
             }
         });
