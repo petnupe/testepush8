@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<style type="text/css">
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+}
+</style>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="themes/tecbizassociado.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+        <script src="jquery/jquery-1.11.3.min.js"></script>
+        <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery.storageapi.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <title>TecBiz Associado</title>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
+            <div data-role="header" data-position="fixed">
+            <h1>Bloquear cartão</h1>
+        </div>
+        <div data-role="content" data-theme="a">
+            <center>
+                <div class="ui-grid-a ui-responsive" align="center">
+                    <p id="entidade_menu" style="font-weight:bold;"></p>
+                    <p id="portador_menu" style="font-weight:bold;"></p>
+                    <p id="situacao_portador" style="font-weight:bold;margin:0px;"></p>
+                </div>
+                <br />
+                <div id="formBlqCartao">
+                <label for="senha" style="color:#F7931E;font-weight:bold;">Senha</label>
+                <input name="senha" id="senha" type="tel" style="text-align:center;" maxlength="6">
+                <label for="justificativa" style="color:#F7931E;font-weight:bold;" >Justificativa</label>
+                <textarea name="justificativa" id="justificativa"></textarea>
+                <p>
+                    <button class="ui-shadow ui-btn ui-corner-all" style="background-color:red; color:black;" onclick="bloquearCartao();">Bloquear cartão</button>
+                </p>
+                   <small>
+                        <b id="textoSenhaInicial">
+                            Esta ação só poderá ser desfeita pela sua Entidade!
+                        </b>
+                    </small>
+                </div>
+                <div data-role="footer" data-position="fixed"> 
+		<!--<a href="menu.html" rel="external" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" style="background:#F7931E;"></a>-->
+                </div>
+            </center>
+        </div>
+        <div data-role="footer" data-position="fixed" align="center">
+            <a href="menu.html" rel="external" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" style="background:#F7931E;"></a>
+        </div>
+    </div>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/bloquearCartao.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
