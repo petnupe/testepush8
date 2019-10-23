@@ -54,6 +54,18 @@ function bloquearCartao () {
 	}
 }
 
-if ($.localStorage.get('dados_usuario')[13].usuario.situacao != 'L') {
-    $('#formBlqCartao').hide();
+if ($.localStorage.get('dados_usuario')[13].usuario.sitcar != 'L') {
+    if ($.localStorage.get('dados_usuario')[13].usuario.sitcar == 'B') {
+        $('#formBlqCartao').html('<b>Cartão:</b> <b style="color:red;">Bloqueado</b>');
+    } else {
+        $('#formBlqCartao').html('<b>Cartão:</b> <b style="color:red;">Cancelado</b>');
+    }
+
+    
+    //$('#formBlqCartao').hide();
+
+
+
+} else  {
+    $('#formBlqCartao').prepend('<div style="font-weight: bold;">Cartão: <c style="color: green;">Liberado</c></div><br />');
 }
