@@ -60,12 +60,6 @@ if ($.localStorage.get('dados_usuario')[13].usuario.sitcar != 'L') {
     } else {
         $('#formBlqCartao').html('<b>Cartão:</b> <b style="color:red;">Cancelado</b>');
     }
-
-    
-    //$('#formBlqCartao').hide();
-
-
-
 } else  {
     $('#formBlqCartao').prepend('<div style="font-weight: bold;">Cartão: <c style="color: green;">Liberado</c></div><br />');
 }

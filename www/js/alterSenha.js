@@ -14,6 +14,13 @@ function alterSenha() {
 
     var erro         = '';
 
+
+    var e = new RegExp('[0-9]', 'g');
+
+    if(!e.test(nova_senha)) {
+        erro += 'A senhas devem conter somente números!\n';
+    }
+
 	if (nova_senha.length < 6 || nova_senha2.length < 6) {
 		erro += 'A senhas devem possuir 6 dígitos!\n';
 	}
