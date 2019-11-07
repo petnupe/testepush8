@@ -49,7 +49,7 @@
     <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.4" />
 
-<edit-config file="AndroidManifest.xml" target="/manifest/application">
+<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merde">
   <application android:usesCleartextTraffic="true" />
 </edit-config>
 </widget>
