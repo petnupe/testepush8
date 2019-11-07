@@ -44,16 +44,15 @@
         <allow-intent href="market:*" />
         <resource-file src="/google-services.json" target="app/google-services.json" />
     </platform>
+    <plugin name="cordova-plugin-fcm-with-dependecy-updated" spec="~2.1.2" />
+    <plugin name="cordova-plugin-fcm" spec="~2.1.2" />
+    <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.4" />
 
 <platform name="android">
   <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
       <application android:usesCleartextTraffic="true" />
   </edit-config>
 </platform>
-
-
-    <plugin name="cordova-plugin-fcm-with-dependecy-updated" spec="~2.1.2" />
-    <plugin name="cordova-plugin-fcm" spec="~2.1.2" />
-    <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.4" />
+    
 </widget>
