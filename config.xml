@@ -41,14 +41,17 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
-
-<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merde">
-  <application android:usesCleartextTraffic="true" />
-</edit-config>
-
         <allow-intent href="market:*" />
         <resource-file src="/google-services.json" target="app/google-services.json" />
     </platform>
+
+<platform name="android">
+  <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+      <application android:usesCleartextTraffic="true" />
+  </edit-config>
+</platform>
+
+
     <plugin name="cordova-plugin-fcm-with-dependecy-updated" spec="~2.1.2" />
     <plugin name="cordova-plugin-fcm" spec="~2.1.2" />
     <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
