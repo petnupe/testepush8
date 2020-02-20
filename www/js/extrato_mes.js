@@ -48,18 +48,38 @@ $(document).ready(function(e) {
 
                     if (data.extrato != null) {
                         $.each(data.extrato, function (k, v) {
+                            let valorAjustado = 0;
+                            if(v.valorParcela < 0) {
+                                valorAjustado = v.valorParcelaFormatado.replace('-', '');
+                            } else {
+                                valorAjustado = '-' + v.valorParcelaFormatado;
+                            }
+
                             if (v.estornada != 1) {
-                                $('#tabelaExtrato').append('<tr><td align="left">'+v.dataCompra + '</td><td align="center">'+v.parcelas+'</td><td>'+v.nomeEstabelecimento+'</td><td align="right">'+v.valorParcelaFormatado +'</td></tr>');     
+                                $('#tabelaExtrato').append('<tr><td align="left">'+v.dataCompra + '</td><td align="center">'+v.parcelas+'</td><td>'+v.nomeEstabelecimento+'</td><td align="right">'+valorAjustado + '</td></tr>');     
                             }
                         });
                     } else {
                         $('#tabelaExtrato').append('<tr><td align="left"></td><td align="center"></td><td></td><td align="right"></td></tr>');
                     }
-                    $('#totalExtrato').append('<tr><td colspan="3" align="right">Total</td><td align="right">'+data.total+'</td></tr>');    
+
+
+                    let totalAjustado = 0;
+
+                    if(data.total.indexOf('-') != -1) {
+                        totalAjustado = data.total.replace('-', '');
+                    } else {
+                        totalAjustado = '-' + data.total;
+                    }
+
+                    if(totalAjustado == '-0,00') {
+                        totalAjustado = '0.00';
+                    }
+                    $('#totalExtrato').append('<tr><td colspan="3" align="right">Total</td><td align="right">'+totalAjustado+'</td></tr>');    
                 }
             });
         }
-         
+       
         function geraSelectMeses(mesAtual, anoAtual) {
             var select = '';
             var nomeMeses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
