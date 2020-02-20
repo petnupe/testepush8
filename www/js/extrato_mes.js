@@ -34,8 +34,18 @@ $(document).ready(function(e) {
                     $('#selectMeses').html('');
                     $('#tabelaExtrato').html('');
                     $('#totalExtrato').html('');
+                    
+                    nomeMeses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+
+                    // Linhas usadas apenas para exibir no label do select o mes atual no primiro acesso ao extrato
+                    if(mes && ano) {
+                        $('#selectMeses-button').children('span').text(nomeMeses[mes-1]+'/'+ano);
+                    } else {
+                        $('#selectMeses-button').children('span').text(nomeMeses[data.mes-1]+'/'+data.ano);
+                    }
 
                     $('#selectMeses').append(selectMeses);
+
                     if (data.extrato != null) {
                         $.each(data.extrato, function (k, v) {
                             if (v.estornada != 1) {
@@ -53,7 +63,7 @@ $(document).ready(function(e) {
         function geraSelectMeses(mesAtual, anoAtual) {
             var select = '';
             var nomeMeses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-          
+            select += '<option> --- </option>';
             for(i = 12; i > 0; i--) {
                 select += '<option value="'+mesAtual+'/'+anoAtual+'">'+ nomeMeses[mesAtual-1]+'/'+anoAtual+'</option>';
                 mesAtual--;
