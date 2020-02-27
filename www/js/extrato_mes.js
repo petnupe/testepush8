@@ -78,7 +78,7 @@ $(document).ready(function(e) {
 
                     if(totalAjustado == '-0,00') {
                         cor = '#000'
-                        totalAjustado = '0.00';
+                        totalAjustado = '0,00';
                     }
                     $('#totalExtrato').append('<tr><td colspan="3" align="right">Total</td><td align="right" style="color: '+cor+';">'+totalAjustado+'</td></tr>');    
                 }
