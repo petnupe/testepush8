@@ -37,7 +37,7 @@ $(document).ready(function(e) {
                     
                     nomeMeses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 
-                    // Linhas usadas apenas para exibir no label do select o mes atual no primiro acesso ao extrato
+                    // Linhas usadas apenas para exibir no label do select o mes atual no primeiro acesso ao extrato
                     if(mes && ano) {
                         $('#selectMeses-button').children('span').text(nomeMeses[mes-1]+'/'+ano);
                     } else {
@@ -49,33 +49,38 @@ $(document).ready(function(e) {
                     if (data.extrato != null) {
                         $.each(data.extrato, function (k, v) {
                             let valorAjustado = 0;
+                            
+                            let cor = '#000';
+                            
                             if(v.valorParcela < 0) {
                                 valorAjustado = v.valorParcelaFormatado.replace('-', '');
                             } else {
                                 valorAjustado = '-' + v.valorParcelaFormatado;
+                                cor = '#FF0000';
                             }
 
                             if (v.estornada != 1) {
-                                $('#tabelaExtrato').append('<tr><td align="left">'+v.dataCompra + '</td><td align="center">'+v.parcelas+'</td><td>'+v.nomeEstabelecimento+'</td><td align="right">'+valorAjustado + '</td></tr>');     
+                                $('#tabelaExtrato').append('<tr><td align="left">'+v.dataCompra + '</td><td align="center">'+v.parcelas+'</td><td>'+v.nomeEstabelecimento+'</td><td align="right" style="color:'+cor+'">'+valorAjustado + '</td></tr>');     
                             }
                         });
                     } else {
                         $('#tabelaExtrato').append('<tr><td align="left"></td><td align="center"></td><td></td><td align="right"></td></tr>');
                     }
 
-
                     let totalAjustado = 0;
-
+                    let cor = '#000';
                     if(data.total.indexOf('-') != -1) {
                         totalAjustado = data.total.replace('-', '');
                     } else {
+                        cor = '#FF0000';
                         totalAjustado = '-' + data.total;
                     }
 
                     if(totalAjustado == '-0,00') {
+                        cor = '#000'
                         totalAjustado = '0.00';
                     }
-                    $('#totalExtrato').append('<tr><td colspan="3" align="right">Total</td><td align="right">'+totalAjustado+'</td></tr>');    
+                    $('#totalExtrato').append('<tr><td colspan="3" align="right">Total</td><td align="right" style="color: '+cor+';">'+totalAjustado+'</td></tr>');    
                 }
             });
         }

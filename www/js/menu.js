@@ -69,6 +69,9 @@ function recarregar() {
 
 function preencheCampos() {
     var data = $.localStorage.get('dados_usuario');
+    $('#mesAtual').text('Mês atual: ' + data[13].usuario.mes_atual);
+    $('#mesAtual').css('font-weight', 'bold');
+
     var nome_usuario = $.localStorage.get('nome_usuario');
     var entidade_usuario = $.localStorage.get('entidade_usuario');
     var saldo_usuario = $.localStorage.get('saldo_mensal');
